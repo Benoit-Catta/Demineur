@@ -24,7 +24,7 @@ public class ButtonControler implements MouseListener {
 	public void mouseClicked(MouseEvent e) {
 		ButtonCase c = (ButtonCase) e.getSource();
 		if(SwingUtilities.isRightMouseButton(e)) {
-			demineur.clic(c.getX(), c.getY(), true);
+			demineur.clic(c.getX2(), c.getY2(), true);
 			fenetre.setDemineur(demineur);
 			fenetre.mettreAJour();
 			fenetre.setDrapeau(demineur.getDrapeau());
@@ -33,11 +33,11 @@ public class ButtonControler implements MouseListener {
 				fenetre.rejouer(demineur.getBombe());
 			}
 		} else {
-			if(demineur.getCase(c.getX(), c.getY()).estDrapeau() == true) {
-				demineur.clic(c.getX(), c.getY(), true);
+			if(demineur.getCase(c.getX2(), c.getY2()).estDrapeau() == true) {
+				demineur.clic(c.getX2(), c.getY2(), true);
 				fenetre.setDrapeau(demineur.getDrapeau());
 			}
-			if(demineur.clic(c.getX(), c.getY(), false) == false) {
+			if(demineur.clic(c.getX2(), c.getY2(), false) == false) {
 				demineur.afficherToutesLesBombes();
 				fenetre.setDemineur(demineur);
 				fenetre.mettreAJour();

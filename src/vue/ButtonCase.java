@@ -39,21 +39,14 @@ public class ButtonCase extends JButton{
 		
 	}
 
-	public int getX() {
+	public int getX2() {
 		return x;
 	}
 
-	public void setX(int x) {
-		this.x = x;
-	}
-
-	public int getY() {
+	public int getY2() {
 		return y;
 	}
 
-	public void setY(int y) {
-		this.y = y;
-	}
 	
 	
 }
